@@ -26,5 +26,8 @@ class Login:
 	def getContent(self,addr):
 		return str(self.session.get(addr).content)
 
+	def getOriginalContent(self,addr):
+		return self.session.get(addr).content
+
 	def sendAnswer(self,addr):
 		return str(self.session.post(addr).content)
